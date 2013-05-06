@@ -21,7 +21,7 @@ This is to be used with the Raspberry Pi board.
      A special timer will be use to start the conversionA2 on each n * 100us time slot. This is a continuous mode.
 
     -Trigger mode
-      On each rising of the port RA5 an conversion is done. This could be use with an other PIC to create a
+      On each rising of the port RA5, one conversion is done. This could be use with an other PIC to create a
       synchronisation between peripherals.
 
 

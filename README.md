@@ -7,7 +7,7 @@ This is to be used with the Raspberry Pi board.
   Up to 5K samples per seconds  is possible. Each sample conversion includes  2 channels.
 
 
-  The I2C bus permits to use  more than one device. Up to 117 in theory.
+  The I2C bus allow us  to use  more than one device. Up to 117 in theory.
   This way it is easy to implement more Analog channels by adding more PIC cpu with a different I2C address.
   A special command allow to change the I2C address and store it into the build-in eeprom.
 

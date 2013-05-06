@@ -46,7 +46,3 @@ This is to be used with the Raspberry Pi board.
     - RpiA2D.png      This is the schematic on how to connect on cpu.
     - RpiA2D_2.png    This is the schematic on how to connect multiple cpus.
 
-
-    
-
-Analog converter  using PIC processeur using I2C bus

@@ -28,19 +28,21 @@ This is to be used with the Raspberry Pi board.
    Files Information
 
    Main CPU program
+   
     - RpiA2D.c        This is the PIC program written in C.
-    - RpiA2D.hex      This is the Hex file needed to burn program into the cpu.
+    - RpiA2D.hex      This is the Hex file needed to burn the program into the cpu.
   
       
    Test program
+
     - A2DTest.c       This is the test program to check and demonstrate the function in C .
     - I2CWrapper.c    This is the functions wrapper to comunicate using I2C needed in A2DTest.c .
     - I2CWrapper.h    This is the header of I2CWrapper.c
     - I2C_A2D.h       This is the header definition for the A/D converter communication protocol.
-
     - AdTest.py       This is the test program written in python to demonstrate how to use it.
 
    Schematic
+   
     - RpiA2D.png      This is the schematic on how to connect on cpu.
     - RpiA2D_2.png    This is the schematic on how to connect multiple cpus.
 

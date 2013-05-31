@@ -45,6 +45,11 @@ This is to be used with the Raspberry Pi board.
    
     - RpiA2D.png      This is the schematic on how to connect on cpu.
     - RpiA2D_2.png    This is the schematic on how to connect multiple cpus.
+    
+    Programmer
+    
+    - RpiPgm.png      This is the schematic on how to connect the cpu to program it.
+    - burnLVP.py      This is the application in python to program the cpu with the Raspberry Pi.
 
    license
    

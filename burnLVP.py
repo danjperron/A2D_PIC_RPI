@@ -486,11 +486,11 @@ elif CpuId == PIC16F1847:
    DataSize    = 256
 elif CpuId == PIC16LF1847:
    print "PIC16LF1847",
-   ProgramSize = 4096
+   ProgramSize = 8192
    DataSize    = 256
 elif CpuId == PIC16LF1840:
    print "PIC12LF1840",
-   ProgramSize = 8192
+   ProgramSize = 4096
    DataSize    = 256
 else:
    print "Invalid"

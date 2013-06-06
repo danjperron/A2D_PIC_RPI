@@ -59,6 +59,24 @@ PIC16F1847 = 0x1480
 PIC12LF1840 = 0x1bc0
 PIC16LF1847 = 0x14A0
 
+PIC16F1826  = 0x2780
+PIC16F1827  = 0x27A0
+PIC16LF1826 = 0x2880
+PIC16LF1827 = 0x28A0
+PIC16F1823  = 0x2720
+PIC16LF1823 = 0x2820
+PIC12F1822  = 0x2700
+PIC12LF1822 = 0x2800
+PIC16F1824  = 0x2740
+PIC16LF1824 = 0x2840
+PIC16F1825  = 0x2760
+PIC16LF1825 = 0x2860
+PIC16F1828  = 0x27C0
+PIC16LF1828 = 0x28C0
+PIC16F1829  = 0x27E0
+PIC16LF1829 = 0x28E0
+
+
 
 
 # command definition
@@ -492,6 +510,54 @@ elif CpuId == PIC16LF1840:
    print "PIC12LF1840",
    ProgramSize = 4096
    DataSize    = 256
+elif CpuId == PIC16F1826:
+   print "PIC16F1826",
+   ProgramSize = 2048
+elif CpuId == PIC16F1827:
+   print "PIC16F1827",
+   ProgramSize = 4096
+elif CpuId == PIC16LF1826:
+   print "PIC16LF1826",
+   ProgramSize = 2048
+elif CpuId == PIC16LF1827:
+   print "PIC16LF1827",
+   ProgramSize = 4096
+elif CpuId == PIC16F1823:
+   print "PIC16F1823",
+   ProgramSize = 2048
+elif CpuId == PIC16LF1823:
+   print "PIC16LF1823",
+   ProgramSize = 2048
+elif CpuId == PIC12F1822:
+   print "PIC16F1822",
+   ProgramSize = 2048
+elif CpuId == PIC12LF1822:
+   print "PIC16LF1822",
+   ProgramSize = 2048
+elif CpuId == PIC16F1824:
+   print "PIC16F1824",
+   ProgramSize = 4096
+elif CpuId == PIC16LF1824:
+   print "PIC16LF1824",
+   ProgramSize = 4096
+elif CpuId == PIC16F1825:
+   print "PIC16F1825",
+   ProgramSize = 8192
+elif CpuId == PIC16LF1825:
+   print "PIC16LF1825",
+   ProgramSize = 8192
+elif CpuId == PIC16F1828:
+   print "PIC16F1828",
+   ProgramSize = 4095
+elif CpuId == PIC16LF1828:
+   print "PIC16LF1828",
+   ProgramSize = 4095
+elif CpuId == PIC16F1829:
+   print "PIC16F1829",
+   ProgramSize = 8192
+elif CpuId == PIC16LF1829:
+   print "PIC16LF1829",
+   ProgramSize = 8192   
 else:
    print "Invalid"
 #   Release_VPP()
@@ -503,8 +569,9 @@ print "ProgramSize =", hex(ProgramSize)
 print "DataSize    =", hex(DataSize)
 
 
-if(CpuId == PIC12F1840 or CpuId == PIC12LF1840 or CpuId == PIC16F1847 or CpuId == PIC16LF1847):
-  Pic12_BulkErase()
+#if(CpuId == PIC12F1840 or CpuId == PIC12LF1840 or CpuId == PIC16F1847 or CpuId == PIC16LF1847):
+if ProgramSize > 0 : 
+ Pic12_BulkErase()
   if Pic12_ProgramBlankCheck(ProgramSize):
     if Pic12_DataBlankCheck(DataSize):
       if Pic12_ProgramBurn(PicData,ProgramBase,ProgramSize):

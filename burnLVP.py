@@ -571,7 +571,7 @@ print "DataSize    =", hex(DataSize)
 
 #if(CpuId == PIC12F1840 or CpuId == PIC12LF1840 or CpuId == PIC16F1847 or CpuId == PIC16LF1847):
 if ProgramSize > 0 : 
- Pic12_BulkErase()
+  Pic12_BulkErase()
   if Pic12_ProgramBlankCheck(ProgramSize):
     if Pic12_DataBlankCheck(DataSize):
       if Pic12_ProgramBurn(PicData,ProgramBase,ProgramSize):

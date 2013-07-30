@@ -487,7 +487,7 @@ CpuId = CpuId & 0x3FE0
 
 #define default Program and EEPROM data size
 ProgramSize = 0
-DataSize    = 0
+DataSize    = 256
 ProgramBase = 0
 DataBase    = 0x1e000
 ConfigBase  = 0x10000

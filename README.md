@@ -53,5 +53,5 @@ This is to be used with the Raspberry Pi board.
 
    license
    
-    - gpl.txt         GNU GENERAL PUBLIC LICENSE
+    - LICENSE.txt     MIT license
     

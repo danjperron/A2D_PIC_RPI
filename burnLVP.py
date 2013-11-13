@@ -272,8 +272,9 @@ def Pic12_DataBurn(pic_data, data_base, data_size):
    print "Writing Data",
    SendCommand(C_RESET_ADDRESS)
    for l in range( data_size):
-      if pic_data.get(l + data_base) != None :
-        Value = pic_data.get(l + data_base)
+     if pic_data.get(l*2 + data_base) != None :	
+      if pic_data.get(l*2 + 1 + data_base) != None :
+        Value = pic_data.get(l*2 + data_base)
         SendCommand(C_LOAD_DATA)
         LoadWord(Value)
         SendCommand(C_BEGIN_INT_PROG)
@@ -316,8 +317,9 @@ def Pic12_DataCheck(pic_data, data_base, data_size):
    print "Data check ",
    SendCommand(C_RESET_ADDRESS)
    for l in range(data_size):
-      if pic_data.get(l+ data_base) != None :
-        Value = pic_data.get(l+data_base)
+     if pic_data.get(l*2+ data_base) != None :	
+      if pic_data.get(l*2 + 1 + data_base) != None :
+        Value = pic_data.get(l*2 +data_base)
         SendCommand(C_READ_DATA)
         RValue = ReadWord()
         if Value != RValue :
